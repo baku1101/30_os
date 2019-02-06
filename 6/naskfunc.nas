@@ -11,6 +11,8 @@
 		GLOBAL	_io_out8, _io_out16, _io_out32
 		GLOBAL	_io_load_eflags, _io_store_eflags
 		GLOBAL	_load_gdtr, _load_idtr
+		GLOBAL	_asm_inthandler21, _asm_inthandler27, _asm_inthandler2c
+		EXTERN	_inthandler21, _inthandler27, _inthandler2c    ;EXTERNは他のソースにある関数の呼び出し(これはint.cにある)
 
 [SECTION .text]
 
@@ -79,8 +81,8 @@ _io_store_eflags:	; void io_store_eflags(int eflags);
 
 _load_gdtr:		; void load_gdtr(int limit, int addr);
 		MOV		AX,[ESP+4]		; limit
-		MOV		[ESP+6],AX
-		LGDT	[ESP+6]
+		MOV		[ESP+6],AX      ; LGDTは"48bit分(つまり6byte分)読み取ってGDTRに代入する"命令で，そのままだと8byte(DWORD*2)でオーバーするからESP+6にlimitを代入する
+		LGDT	[ESP+6]         ; GDTレジスタ:GDTが始まるアドレスとGDTのサイズを格納
 		RET
 
 _load_idtr:		; void load_idtr(int limit, int addr);
@@ -88,6 +90,54 @@ _load_idtr:		; void load_idtr(int limit, int addr);
 		MOV		[ESP+6],AX
 		LIDT	[ESP+6]
 		RET
+
+_asm_inthandler21:    ; 割り込み処理は，レジスタの値をスタックに退避させてから実行
+		PUSH	ES
+		PUSH	DS
+		PUSHAD                ; 諸々のレジスタ(8個)をスタックにpushするやつ
+		MOV		EAX,ESP
+		PUSH	EAX
+		MOV		AX,SS   ;SS=DS=ESになるように(同じセグメントを指すように)する
+		MOV		DS,AX   ;(こうしないとC言語的にまずいらしい)
+		MOV		ES,AX   ;
+		CALL	_inthandler21
+		POP		EAX
+		POPAD
+		POP		DS
+		POP		ES
+		IRETD
+
+_asm_inthandler27:
+		PUSH	ES
+		PUSH	DS
+		PUSHAD
+		MOV		EAX,ESP
+		PUSH	EAX
+		MOV		AX,SS
+		MOV		DS,AX
+		MOV		ES,AX
+		CALL	_inthandler27
+		POP		EAX
+		POPAD
+		POP		DS
+		POP		ES
+		IRETD
+
+_asm_inthandler2c:
+		PUSH	ES
+		PUSH	DS
+		PUSHAD
+		MOV		EAX,ESP
+		PUSH	EAX
+		MOV		AX,SS
+		MOV		DS,AX
+		MOV		ES,AX
+		CALL	_inthandler2c
+		POP		EAX
+		POPAD
+		POP		DS
+		POP		ES
+		IRETD
 
 ; もう使っていない
 ; _write_mem8:	; void write_mem8(int addr, int data);
