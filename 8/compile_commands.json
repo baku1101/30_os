@@ -1,0 +1,1 @@
+[{"directory": "/home/watanabe/Dropbox/workspace/30_os/8","file": "dsctbl.c", "arguments": ["/usr/lib/llvm-6.0/bin/clang", "-xc++", "dsctbl.c", "--driver-mode=g++", "-std=c++14", "-Wall", "-Wno-unused-const-variable", "-g", "-fsanitize=undefined", "-D", "_GLIBCXX_DEBUG", "--target=x86_64-pc-linux-gnu"]}]
