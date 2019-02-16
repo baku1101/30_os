@@ -1,1 +1,1 @@
-../z_tools/apply-patch.sh
+patch -b Makefile ../z_tools/Makefile.patch
