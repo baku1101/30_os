@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/bootpack.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/bootpack.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/bootpack.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/int.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/int.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/int.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/dsctbl.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/dsctbl.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/dsctbl.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/fifo.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/fifo.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/fifo.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/graphic.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/graphic.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/graphic.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/keyboard.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/keyboard.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/keyboard.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/memory.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/memory.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/memory.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/mouse.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/mouse.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/mouse.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/mtask.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/mtask.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/mtask.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/sheet.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/sheet.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/sheet.c"
+},
+{
+  "directory": "/home/watanabe/google-drive/workspace/os/30_os/16/build",
+  "command": "/usr/bin/cc     -o CMakeFiles/main.dir/timer.c.o   -c /home/watanabe/google-drive/workspace/os/30_os/16/timer.c",
+  "file": "/home/watanabe/google-drive/workspace/os/30_os/16/timer.c"
+}
+]

@@ -1,1 +1,4 @@
-../z_tools/conv.sh
+#!/bin/sh
+
+patch -b ./Makefile ../z_tools/Makefile.patch
+
